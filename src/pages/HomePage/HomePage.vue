@@ -1,5 +1,5 @@
 <template>
-  <div class="card flex justify-center flex-wrap gap-4">
+  <div class="card flex flex-col justify-center flex-wrap gap-4">
     <Button label="Primary" />
     <Button label="Secondary" severity="secondary" />
     <Button label="Success" severity="success" />
@@ -8,6 +8,8 @@
     <Button label="Help" severity="help" />
     <Button label="Danger" severity="danger" />
     <Button label="Contrast" severity="contrast" />
+
+    <div class="text-red-500 font-bold">Si ves este texto rojo, Tailwind está funcionando.</div>
   </div>
 
   <div class="card flex flex-wrap justify-center gap-2">
