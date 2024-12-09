@@ -6,7 +6,7 @@ const visible = ref(false)
 
 <template>
   <div class="card flex justify-center">
-    <Button icon="pi pi-bars" color="black" @click="visible = true" />
+    <Button icon="pi pi-bars" severity="secondary" @click="visible = true" />
 
     <Drawer v-model:visible="visible">
       <template #container="{ closeCallback }">
