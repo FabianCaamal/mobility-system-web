@@ -4,6 +4,7 @@ import { MainLayout } from '@/components'
 </script>
 
 <template>
-  <RouterView />
-  <MainLayout> </MainLayout>
+  <MainLayout>
+    <RouterView />
+  </MainLayout>
 </template>

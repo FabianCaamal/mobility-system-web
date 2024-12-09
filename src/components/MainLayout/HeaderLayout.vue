@@ -3,7 +3,7 @@ import NavigationLayout from './NavigationLayout.vue'
 </script>
 
 <template>
-  <div class="card w-full h-10 p-2 border-b-white">
+  <div class="w-full p-2 border-b">
     <section class="flex justify-between w-full">
       <NavigationLayout />
 

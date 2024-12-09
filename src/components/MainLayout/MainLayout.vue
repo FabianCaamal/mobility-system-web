@@ -3,7 +3,7 @@ import HeaderLayout from './HeaderLayout.vue'
 </script>
 
 <template>
-  <section class="flex flex-column h-full w-full">
+  <section class="flex flex-col h-full w-full">
     <HeaderLayout />
 
     <div class="px-2 pt-3 flex-1 h-dvh">
