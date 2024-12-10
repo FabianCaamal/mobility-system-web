@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
+import NavigationLayout from './NavigationLayout.vue'
 
 const drawer = ref(false)
 </script>
@@ -9,12 +10,14 @@ const drawer = ref(false)
   <v-layout class="rounded rounded-md">
     <HeaderLayout @on-drawer="drawer = !drawer" />
 
-    <v-navigation-drawer v-model="drawer" temporary>
-      <v-list>
-        <v-list-item title="Navigation drawer"></v-list-item>
-      </v-list>
+    <v-navigation-drawer expand-on-hover rail>
+      <NavigationLayout />
     </v-navigation-drawer>
 
-    <v-main class="d-flex align-center justify-center"> Main Content </v-main>
+    <v-main>
+      <div class="!p-3">
+        <slot />
+      </div>
+    </v-main>
   </v-layout>
 </template>
