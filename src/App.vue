@@ -4,7 +4,9 @@ import { MainLayout } from '@/components'
 </script>
 
 <template>
-  <MainLayout>
-    <RouterView />
-  </MainLayout>
+  <VApp>
+    <MainLayout>
+      <RouterView />
+    </MainLayout>
+  </VApp>
 </template>

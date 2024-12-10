@@ -1,13 +1,20 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
+
+const drawer = ref(false)
 </script>
 
 <template>
-  <section class="flex flex-col h-full w-full">
-    <HeaderLayout />
+  <v-layout class="rounded rounded-md">
+    <HeaderLayout @on-drawer="drawer = !drawer" />
 
-    <div class="px-2 pt-3 flex-1 h-dvh dark:text-white text-black font-bold">
-      <slot></slot>
-    </div>
-  </section>
+    <v-navigation-drawer v-model="drawer" temporary>
+      <v-list>
+        <v-list-item title="Navigation drawer"></v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-main class="d-flex align-center justify-center"> Main Content </v-main>
+  </v-layout>
 </template>
