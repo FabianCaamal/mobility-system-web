@@ -65,8 +65,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-wrap items-center justify-between gap-2 p-5 mb-2">
-    <div class="!p-3">
+  <div class="flex flex-wrap items-center justify-between gap-2 !p-3 mb-2">
+    <div class="p-3">
       {{ props.title }}
     </div>
 

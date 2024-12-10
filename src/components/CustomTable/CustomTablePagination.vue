@@ -9,7 +9,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex items-center justify-between p-3 text-xs text-gray-600 bg-gray-100">
+  <div class="flex items-center justify-between !p-3 text-xs">
     <div>{{ props.data.totalItems }} records</div>
 
     <div class="flex flex-row-reverse gap-5">

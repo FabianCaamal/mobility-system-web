@@ -11,7 +11,7 @@ const props = defineProps<{
 
 <template>
   <div class="overflow-auto relative" style="max-height: calc(100vh - 17rem)">
-    <table class="w-full text-sm text-gray-600">
+    <table class="w-full text-sm">
       <thead class="sticky -top-1 z-10 text-gray-500 uppercase border-style border-t">
         <slot name="tableHeader"></slot>
       </thead>
@@ -42,9 +42,9 @@ const props = defineProps<{
 .body-style {
   font-size: 0.85rem;
 
-  // tr:nth-child(odd) {
-  //   background-color: #e4eaf06a;
-  // }
+  td {
+    opacity: 80%;
+  }
 }
 
 .hover-style-row {
@@ -52,7 +52,7 @@ const props = defineProps<{
     cursor: pointer;
 
     &:hover {
-      background-color: #a2c4ec5c;
+      background-color: var(--color-border-hover);
 
       td:first-child::before {
         content: '';
@@ -63,7 +63,7 @@ const props = defineProps<{
         height: 100%;
         z-index: 9;
         border-radius: 0px 5px 5px 0px;
-        background-color: rgb(88, 135, 245);
+        background-color: rgb(132, 132, 133);
       }
     }
   }
