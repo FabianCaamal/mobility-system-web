@@ -66,14 +66,12 @@ onMounted(() => {
 
 <template>
   <div class="flex flex-wrap items-center justify-between gap-2 p-5 mb-2">
-    <div class="flex flex-col">
-      <TextWrap size="2xl" weight="semibold" color="blue">
-        {{ props.title }}
-      </TextWrap>
+    <div class="!p-3">
+      {{ props.title }}
     </div>
 
     <div class="w-4/6 md:w-1/3">
-      <SearchBar v-model:text="searchInput" :placeholder="placeholderInput" rounded="full">
+      <VTextField v-model:text="searchInput" :placeholder="placeholderInput" rounded="lg">
         <template #append-inner>
           <VMenu v-if="props.filterOpts.length > 1">
             <template #activator="{ props }">
@@ -91,7 +89,7 @@ onMounted(() => {
             </VSheet>
           </VMenu>
         </template>
-      </SearchBar>
+      </VTextField>
     </div>
 
     <div class="flex justify-end gap-1">

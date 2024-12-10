@@ -174,7 +174,7 @@ const onPageNumber = (pageNumber: number) => {
           <template v-for="(column, _colIndex) in columns" :key="_colIndex">
             <td
               v-if="column.component.type"
-              class="px-5 py-[0.7rem]"
+              class="!px-5 !py-[0.7rem]"
               :class="column.props?.class"
               :colspan="column.props?.colspan"
               :style="{ 'text-align': column.props?.justify || 'left' }"
@@ -188,7 +188,6 @@ const onPageNumber = (pageNumber: number) => {
     </CustomTableTable>
 
     <CustomTablePagination
-      v-if="props.features?.pagination"
       :data="props.tableData"
       :loading="props.loading"
       @onNextPage="onNextPage"
@@ -204,7 +203,7 @@ const onPageNumber = (pageNumber: number) => {
   cursor: pointer;
 
   &:hover {
-    background-color: #f5f5f5;
+    background-color: #1a191923;
     border-bottom: 1px solid;
   }
 }

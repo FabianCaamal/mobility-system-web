@@ -12,7 +12,7 @@ const props = defineProps<{
 <template>
   <div class="overflow-auto relative" style="max-height: calc(100vh - 17rem)">
     <table class="w-full text-sm text-gray-600">
-      <thead class="sticky -top-1 z-10 text-gray-500 bg-gray-100 uppercase border-style border-t">
+      <thead class="sticky -top-1 z-10 text-gray-500 uppercase border-style border-t">
         <slot name="tableHeader"></slot>
       </thead>
 

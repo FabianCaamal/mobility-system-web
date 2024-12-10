@@ -10,12 +10,12 @@ const drawer = ref(false)
   <v-layout class="rounded rounded-md">
     <HeaderLayout @on-drawer="drawer = !drawer" />
 
-    <v-navigation-drawer expand-on-hover rail>
+    <v-navigation-drawer expand-on-hover>
       <NavigationLayout />
     </v-navigation-drawer>
 
     <v-main>
-      <div class="!p-3">
+      <div class="!p-5">
         <slot />
       </div>
     </v-main>
