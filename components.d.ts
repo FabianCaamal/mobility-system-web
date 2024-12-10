@@ -16,9 +16,11 @@ declare module 'vue' {
     InputText: typeof import('primevue/inputtext')['default']
     MainLayout: typeof import('./src/components/MainLayout/MainLayout.vue')['default']
     NavigationLayout: typeof import('./src/components/MainLayout/NavigationLayout.vue')['default']
+    ProgressBar: typeof import('primevue/progressbar')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Skeleton: typeof import('primevue/skeleton')['default']
+    Toast: typeof import('primevue/toast')['default']
   }
   export interface ComponentCustomProperties {
     Ripple: typeof import('primevue/ripple')['default']
