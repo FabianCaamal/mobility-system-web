@@ -1,3 +1,36 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+
+const navigationList = computed(() => [
+  {
+    title: 'Home',
+    icon: 'mdi-home',
+    path_name: 'home',
+  },
+  {
+    title: 'Admin',
+    icon: 'mdi-shield-crown',
+    children: [
+      {
+        title: 'Users',
+        icon: 'mdi-account-multiple',
+        path_name: 'admin-users',
+      },
+      {
+        title: 'Roles',
+        icon: 'mdi-account-multiple',
+        path_name: 'admin-roles',
+      },
+    ],
+  },
+  {
+    title: 'Management',
+    icon: 'mdi-star',
+    path_name: 'home',
+  },
+])
+</script>
+
 <template>
   <VList>
     <VListItem
@@ -7,11 +40,27 @@
     />
   </VList>
 
-  <v-divider></v-divider>
+  <v-divider />
 
-  <v-list density="compact" nav>
-    <v-list-item prepend-icon="mdi-folder" title="My Files" value="myfiles"></v-list-item>
-    <v-list-item prepend-icon="mdi-account-multiple" title="Shared with me" value="shared"></v-list-item>
-    <v-list-item prepend-icon="mdi-star" title="Starred" value="starred"></v-list-item>
+  <v-list class="pa-0" nav>
+    <template v-for="(item, _idx) in navigationList" :key="_idx">
+      <v-list-item
+        v-if="!item.children"
+        color="primary"
+        :prepend-icon="item.icon"
+        :title="item.title"
+        :to="{ name: item.path_name }"
+      />
+
+      <VListGroup v-else>
+        <template #activator="{ props }">
+          <VListItem v-bind="props" :prepend-icon="item.icon" color="primary" :title="item.title" />
+        </template>
+
+        <template v-for="(subItem, _index) in item.children" :key="_index">
+          <VListItem :title="subItem.title" :to="{ name: subItem.path_name }" />
+        </template>
+      </VListGroup>
+    </template>
   </v-list>
 </template>

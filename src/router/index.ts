@@ -10,13 +10,20 @@ const router = createRouter({
       component: Pages.HomePage,
     },
     {
+      path: '/:pathMatch(.*)',
+      redirect: '/',
+    },
+    {
       path: '/login',
       name: 'login',
       component: Pages.LoginPage,
     },
     {
-      path: '/:pathMatch(.*)',
-      redirect: '/',
+      path: '/admin',
+      children: [
+        { path: 'roles', name: 'admin-roles', component: Pages.RolesPage },
+        { path: 'users', name: 'admin-users', component: Pages.UsersPage },
+      ],
     },
   ],
 })
