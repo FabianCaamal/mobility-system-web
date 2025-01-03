@@ -15,9 +15,7 @@ const drawer = ref(false)
     </v-navigation-drawer>
 
     <v-main>
-      <div class="!pt-5 !px-8">
-        <slot />
-      </div>
+      <slot />
     </v-main>
   </v-layout>
 </template>

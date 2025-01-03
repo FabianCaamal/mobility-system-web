@@ -23,8 +23,10 @@ export const vuetify = createVuetify({
   defaults: {
     VBtn: {
       size: 'small',
-      elevation: '0',
+      elevation: '1',
       variant: 'tonal',
+      rounded: 'lg',
+      height: '1.8rem',
     },
     VTextField: {
       density: 'compact',

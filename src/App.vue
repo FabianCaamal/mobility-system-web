@@ -7,11 +7,11 @@ import { MainLayout } from '@/components'
   <VApp>
     <MainLayout>
       <router-view v-slot="{ Component }">
-        <transition>
+        <component :is="Component" />
+        <!-- <transition>
           <keep-alive>
-            <component :is="Component" />
           </keep-alive>
-        </transition>
+        </transition> -->
       </router-view>
     </MainLayout>
   </VApp>

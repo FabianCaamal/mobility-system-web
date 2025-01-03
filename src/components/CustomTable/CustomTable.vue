@@ -124,7 +124,7 @@ const onPageNumber = (pageNumber: number) => {
 </script>
 
 <template>
-  <VSheet class="relative" elevation="4">
+  <VSheet class="relative h-100 d-flex flex-col" elevation="4">
     <CustomTableHeader
       :title="props.title"
       :features="props.features"

@@ -23,11 +23,6 @@ const navigationList = computed(() => [
       },
     ],
   },
-  {
-    title: 'Management',
-    icon: 'mdi-star',
-    path_name: 'home',
-  },
 ])
 </script>
 

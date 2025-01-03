@@ -43,7 +43,7 @@ const sortAscValue = computed({
 })
 const placeholderInput = computed(() => {
   const filter = props.filterOpts.find((f) => f.value === filterKeySelected.value)
-  return `Buscar por ${filter?.label?.toLowerCase()}`
+  return `Buscar por ${filter?.label?.toLowerCase() || 'nombre'}`
 })
 
 watch(searchInput, (value) => {
@@ -66,12 +66,12 @@ onMounted(() => {
 
 <template>
   <div class="flex flex-wrap items-center justify-between gap-2 !p-3 mb-2">
-    <div class="p-3">
+    <div class="p-3 text-2xl">
       {{ props.title }}
     </div>
 
     <div class="w-4/6 md:w-1/3">
-      <VTextField v-model:text="searchInput" :placeholder="placeholderInput" rounded="lg">
+      <VTextField v-model:text="searchInput" :placeholder="placeholderInput" rounded="xl">
         <template #append-inner>
           <VMenu v-if="props.filterOpts.length > 1">
             <template #activator="{ props }">
@@ -93,11 +93,18 @@ onMounted(() => {
     </div>
 
     <div class="flex justify-end gap-1">
+      <VBtn
+        height="2rem"
+        color="primary"
+        size="small"
+        append-icon="mdi-plus"
+        text="Agregar"
+        @click="emits('onBtnAdd')"
+      />
+
       <VMenu :close-on-content-click="false">
         <template #activator="{ props }">
-          <VBtn v-bind="props" height="2rem" rounded="sm" size="small" append-icon="mdi-chevron-down">
-            Ordenar por
-          </VBtn>
+          <VBtn v-bind="props" height="2rem" size="small" icon="mdi-swap-vertical" />
         </template>
 
         <VSheet class="py-1 px-3">
@@ -113,28 +120,6 @@ onMounted(() => {
           </v-radio-group>
         </VSheet>
       </VMenu>
-
-      <VBtn
-        height="2rem"
-        append-icon="mdi-file-excel"
-        color="green"
-        rounded="sm"
-        size="x-small"
-        @click="emits('onClickExcel')"
-      >
-        <span class="hidden-mobile">Descargar</span>
-      </VBtn>
-
-      <VBtn
-        height="2rem"
-        rounded="sm"
-        color="primary"
-        size="small"
-        append-icon="mdi-plus"
-        @click="emits('onBtnAdd')"
-      >
-        <span class="hidden-mobile">Agregar</span>
-      </VBtn>
     </div>
   </div>
 </template>

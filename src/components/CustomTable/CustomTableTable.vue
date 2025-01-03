@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { EmptyStateApp } from '@/components'
+
 const props = defineProps<{
   withHover?: boolean
   sortHover?: boolean
@@ -8,7 +10,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="overflow-auto relative" style="max-height: calc(100vh - 17rem)">
+  <div class="overflow-auto relative flex-1">
     <table class="w-full text-sm">
       <thead class="sticky -top-1 z-10 text-gray-500 uppercase border-style border-t">
         <slot name="tableHeader"></slot>
@@ -24,7 +26,7 @@ const props = defineProps<{
     </div>
 
     <template v-else-if="props.lengthItems === 0">
-      <div class="py-24">empty</div>
+      <EmptyStateApp />
     </template>
   </div>
 </template>
