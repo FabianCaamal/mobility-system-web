@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { GetColors } from '@/helpers'
-import type { Pagination } from '@/models'
+import type { Pagination } from '@/types'
 import { CustomTable, TemplateColumn } from '@/components'
 
 const data = ref<Pagination>({

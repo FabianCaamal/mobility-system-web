@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
-import type { Option } from '@/models'
+import type { Option } from '@/types/components/CustomTable'
 
 enum SortEnum {
   ASC = 0,

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-// import { TrackmeEmptyState } from '@common/components'
-
 const props = defineProps<{
   withHover?: boolean
   sortHover?: boolean

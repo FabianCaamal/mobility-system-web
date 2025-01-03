@@ -1,4 +1,4 @@
-import { Pagination } from '@/models'
+import { Pagination } from '@/types'
 
 export interface PropTableData extends Pagination {
   items: unknown[]

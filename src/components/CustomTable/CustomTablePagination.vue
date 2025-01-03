@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PropTableData } from '@/models'
+import type { PropTableData } from '@/types/components/CustomTable'
 
 defineEmits(['onNextPage', 'onPrevPage', 'onPageSize', 'onPageNumber'])
 const props = defineProps<{
