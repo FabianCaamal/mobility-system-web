@@ -14,4 +14,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1_000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router', 'axios', 'pinia'], // Agrupa dependencias comunes en un chunk llamado "vendor"
+        },
+      },
+    },
+  },
 })
