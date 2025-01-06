@@ -23,6 +23,22 @@ const navigationList = computed(() => [
       },
     ],
   },
+  {
+    title: 'Mobility management',
+    icon: 'mdi-shield-crown',
+    children: [
+      {
+        title: 'Checks',
+        icon: 'mdi-account-multiple',
+        path_name: 'admin-users',
+      },
+      {
+        title: 'RechargeLocationTypes',
+        icon: 'mdi-account-multiple',
+        path_name: 'admin-roles',
+      },
+    ],
+  },
 ])
 </script>
 
@@ -53,7 +69,7 @@ const navigationList = computed(() => [
         </template>
 
         <template v-for="(subItem, _index) in item.children" :key="_index">
-          <VListItem :title="subItem.title" :to="{ name: subItem.path_name }" />
+          <VListItem :title="subItem.title" :to="{ name: subItem.path_name }" color="primary" />
         </template>
       </VListGroup>
     </template>

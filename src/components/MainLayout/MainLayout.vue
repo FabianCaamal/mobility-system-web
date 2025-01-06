@@ -7,15 +7,17 @@ const drawer = ref(false)
 </script>
 
 <template>
-  <v-layout class="rounded rounded-md">
+  <VLayout class="rounded-md">
     <HeaderLayout @on-drawer="drawer = !drawer" />
 
-    <v-navigation-drawer v-model="drawer" expand-on-hover>
+    <VNavigationDrawer v-model="drawer" expand-on-hover>
       <NavigationLayout />
-    </v-navigation-drawer>
+    </VNavigationDrawer>
 
-    <v-main>
-      <slot />
-    </v-main>
-  </v-layout>
+    <VMain>
+      <VSheet class="h-100 w-100">
+        <slot />
+      </VSheet>
+    </VMain>
+  </VLayout>
 </template>

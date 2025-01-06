@@ -1,3 +1,4 @@
 import { GetColors } from './GetColors'
+import { CreateMap } from './CreateMap'
 
-export { GetColors }
+export { GetColors, CreateMap }

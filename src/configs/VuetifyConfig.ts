@@ -10,8 +10,9 @@ export const vuetify = createVuetify({
   components,
   directives,
   theme: {
+    defaultTheme: 'dark',
     themes: {
-      light: {
+      dark: {
         dark: true,
         colors: {
           primary: '#0963B3',

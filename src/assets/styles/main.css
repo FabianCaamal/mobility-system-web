@@ -19,7 +19,7 @@ html > ::-webkit-scrollbar {
 body {
   min-height: 100dvh;
   color: var(--color-text);
-  background: var(--color-background);
+  background-color: var(--color-background, 0.5);
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -37,4 +37,8 @@ body {
 
 .v-btn__content {
   text-transform: none !important;
+}
+
+.v-list-item__prepend {
+  width: 2.5rem;
 }

@@ -17,7 +17,7 @@ const data = ref<Pagination>({
 <template>
   <div class="w-full h-full">
     <CustomTable title="Roles" v-model:table-data="data">
-      <CustomTableItem title="çNombre" />
+      <CustomTableItem title="Nombre" />
       <CustomTableItem title="Descripción" />
       <CustomTableItem title="Está activo" />
     </CustomTable>

@@ -4,11 +4,19 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import { vuetify } from '@/configs/VuetifyConfig'
+import { InitMap } from '@/helpers/CreateMap'
+
 import '@/assets/styles/main.css'
 
 const app = createApp(App)
-
 app.use(createPinia())
 app.use(router)
 app.use(vuetify)
-app.mount('#app')
+
+try {
+  InitMap()
+} catch (error) {
+  console.error(error)
+} finally {
+  app.mount('#app')
+}
