@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { CustomTable, TemplateColumn } from '@/components'
+import { CustomTable, CustomTableItem } from '@/components'
 import type { Pagination } from '@/types'
 
 const data = ref<Pagination>({
@@ -17,9 +17,9 @@ const data = ref<Pagination>({
 <template>
   <div class="w-full h-full">
     <CustomTable title="Roles" v-model:table-data="data">
-      <TemplateColumn title="çNombre" />
-      <TemplateColumn title="Descripción" />
-      <TemplateColumn title="Está activo" />
+      <CustomTableItem title="çNombre" />
+      <CustomTableItem title="Descripción" />
+      <CustomTableItem title="Está activo" />
     </CustomTable>
   </div>
 </template>

@@ -11,5 +11,15 @@ defineEmits(['onDrawer'])
     <v-spacer></v-spacer>
 
     <VBtn icon="mdi-bell" elevation="0" />
+
+    <VMenu>
+      <template #activator="{ props }">
+        <VBtn icon="mdi-dots-vertical" elevation="0" v-bind="props" />
+      </template>
+
+      <VList>
+        <VListItem title="Theme" />
+      </VList>
+    </VMenu>
   </v-app-bar>
 </template>

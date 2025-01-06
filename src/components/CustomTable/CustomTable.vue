@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
-import type { CustomTableProps, Option, TemplateColumnProps } from '@/types/components/CustomTable'
+import type { CustomTableProps, Option } from '@/types/components/CustomTable'
+import type { TemplateColumnProps } from '@/types/components/CustomTableItem'
 import CustomTableHeader from './CustomTableHeader.vue'
 import CustomTableTable from './CustomTableTable.vue'
 import CustomTablePagination from './CustomTablePagination.vue'

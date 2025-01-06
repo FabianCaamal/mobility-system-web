@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { TemplateColumnProps } from '@/types/components/CustomTable'
+import type { TemplateColumnProps } from '@/types/components/CustomTableItem'
 
 const props = defineProps<TemplateColumnProps>()
 </script>
